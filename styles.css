@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+.botones {
+    display: flex;
+    gap: 20px;
+}
+.boton {
+    text-align: center;
+    width: 150px;
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+.boton:hover {
+    background-color: #007bff;
+    color: white;
+    border-color: #0056b3;
+}
+.boton img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.boton p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 0;
+}
