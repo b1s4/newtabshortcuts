@@ -3,81 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>noticias</title>
+    <title>Noticias</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
         .botones {
             display: flex;
-            justify-content: space-around;
-            align-items: center;
-            background-color: #f4f4f4;
-            padding: 10px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap;
+            gap: 10px;
         }
         .boton {
-            text-align: center;
             text-decoration: none;
-            color: black;
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .boton:hover {
+            background-color: #f0f0f0;
         }
         .boton img {
             width: 50px;
             height: 50px;
-            display: block;
-            margin: 0 auto;
-        }
-        .boton p {
-            margin: 0;
-            padding: 5px 0;
-            font-size: 12px;
-        }
-        main {
-            margin-top: 80px; /* Para que el contenido no quede oculto debajo del menú */
         }
     </style>
 </head>
 <body>
     <div class="botones">
         <a href="https://news.google.es/" class="boton">
-            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F022%2F613%2F029%2Fnon_2x%2Fgoogle-news-icon-logo-symbol-free-png.png&f=1&nofb=1&ipt=107de0c727f083e6b070c9ea129ef26647e5f6647baf6abf6893b0a63bc18de9&ipo=images" alt="NOTICIAS GENERALES">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F022%2F613%2F029%2Fnon_2x%2Fgoogle-news-icon-logo-symbol-free-png.png&f=1&nofb=1&ipt=107de0c727f083e6b070c9ea129ef26647e5f6647baf6abf6893b0a63bc18de9&ipo=images" alt="FUTBOL">
             <p>NOTICIAS GENERALES</p>
         </a>
         <a href="https://news.google.com/foryou" class="boton">
-            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F022%2F613%2F029%2Fnon_2x%2Fgoogle-news-icon-logo-symbol-free-png.png&f=1&nofb=1&ipt=107de0c727f083e6b070c9ea129ef26647e5f6647baf6abf6893b0a63bc18de9&ipo=images" alt="NOTICIAS ILIMITADAS">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F022%2F613%2F029%2Fnon_2x%2Fgoogle-news-icon-logo-symbol-free-png.png&f=1&nofb=1&ipt=107de0c727f083e6b070c9ea129ef26647e5f6647baf6abf6893b0a63bc18de9&ipo=images" alt="FUTBOL">
             <p>NOTICIAS ILIMITADAS</p>
         </a>
         <a href="http://www.diariovasco.com" class="boton">
-            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fyt3.ggpht.com%2Fa%2FAATXAJxrqvR4TDiqmFjd9AFdAniTIAqJghLn4h57gQ%3Ds900-c-k-c0xffffffff-no-rj-mo&f=1&nofb=1&ipt=5f5f6d594cf71024c0851b16b79253022727b9362e057d98f2fd96f31d6753b4&ipo=images" alt="DIARIO VASCO">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fyt3.ggpht.com%2Fa%2FAATXAJxrqvR4TDiqmFjd9AFdAniTIAqJghLn4h57gQ%3Ds900-c-k-c0xffffffff-no-rj-mo&f=1&nofb=1&ipt=5f5f6d594cf71024c0851b16b79253022727b9362e057d98f2fd96f31d6753b4&ipo=images" alt="NOTICIAS">
             <p>DIARIO VASCO</p>
         </a>
         <a href="https://www.elmundo.es/" class="boton">
-            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogowik.com%2Fcontent%2Fuploads%2Fimages%2Fel-mundo6102.logowik.com.webp&f=1&nofb=1&ipt=b285d690c44738c8fdc77042013711f8d9826eeaa3cd3634861bfdcc1fb0ed41&ipo=images" alt="EL MUNDO">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogowik.com%2Fcontent%2Fuploads%2Fimages%2Fel-mundo6102.logowik.com.webp&f=1&nofb=1&ipt=b285d690c44738c8fdc77042013711f8d9826eeaa3cd3634861bfdcc1fb0ed41&ipo=images" alt="AYUDA">
             <p>EL MUNDO</p>
         </a>
         <a href="https://elpais.com/" class="boton">
-            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogodownload.org%2Fwp-content%2Fuploads%2F2019%2F05%2Fel-pais-logo-0.png&f=1&nofb=1&ipt=f1f8f1042e74357ee186123f2967b27d3d1013eda769163c8997dea49aab377f&ipo=images" alt="EL PAIS">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogodownload.org%2Fwp-content%2Fuploads%2F2019%2F05%2Fel-pais-logo-0.png&f=1&nofb=1&ipt=f1f8f1042e74357ee186123f2967b27d3d1013eda769163c8997dea49aab377f&ipo=images" alt="AYUDA">
             <p>EL PAIS</p>
         </a>
         <a href="https://www.marca.com/" class="boton">
-            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.logotypes101.com%2Flogos%2F292%2FE10C3118FC99B2AE2DA7987F3D1693FD%2Ftn_Marca_com158.png&f=1&nofb=1&ipt=15d7652112c95115da644f159908c1088ea7a3e0458fa6bfc27f2ed4ff92b0e0&ipo=images" alt="MARCA">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.logotypes101.com%2Flogos%2F292%2FE10C3118FC99B2AE2DA7987F3D1693FD%2Ftn_Marca_com158.png&f=1&nofb=1&ipt=15d7652112c95115da644f159908c1088ea7a3e0458fa6bfc27f2ed4ff92b0e0&ipo=images" alt="AYUDA">
             <p>MARCA</p>
         </a>
     </div>
-    <main>
-        <p>Aquí va el contenido principal de la página.</p>
-    </main>
+
     <script>
         document.querySelectorAll('.boton').forEach(boton => {
+            let timer;
+
             boton.addEventListener('mouseover', () => {
-                window.location.href = boton.href;
+                timer = setTimeout(() => {
+                    window.location.href = boton.href;
+                }, 10000); // 10 segundos
+            });
+
+            boton.addEventListener('mouseout', () => {
+                clearTimeout(timer);
             });
         });
     </script>
