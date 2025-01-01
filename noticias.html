@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>noticias</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .boton {
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+        }
+        .boton img {
+            width: 100px;
+            height: 100px;
+        }
+        .boton p {
+            margin: 0;
+            padding: 5px 0;
+        }
+    </style>
 </head>
 <body>
     <div class="botones">
@@ -28,11 +44,17 @@
             <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogodownload.org%2Fwp-content%2Fuploads%2F2019%2F05%2Fel-pais-logo-0.png&f=1&nofb=1&ipt=f1f8f1042e74357ee186123f2967b27d3d1013eda769163c8997dea49aab377f&ipo=images" alt="AYUDA">
             <p>EL PAIS</p>
         </a>
-          </a>
         <a href="https://www.marca.com/" class="boton">
             <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.logotypes101.com%2Flogos%2F292%2FE10C3118FC99B2AE2DA7987F3D1693FD%2Ftn_Marca_com158.png&f=1&nofb=1&ipt=15d7652112c95115da644f159908c1088ea7a3e0458fa6bfc27f2ed4ff92b0e0&ipo=images" alt="AYUDA">
             <p>MARCA</p>
         </a>
     </div>
+    <script>
+        document.querySelectorAll('.boton').forEach(boton => {
+            boton.addEventListener('mouseover', () => {
+                window.location.href = boton.href;
+            });
+        });
+    </script>
 </body>
 </html>
