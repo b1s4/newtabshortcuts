@@ -3,15 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>futbol</title>
+    <title>Fútbol</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .botones {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .boton {
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            width: 150px;
+        }
+        .boton:hover {
+            background-color: #f0f0f0;
+        }
+        .boton img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
 </head>
 <body>
     <div class="botones">
         <a href="https://onefootball.com/es/partidos" class="boton">
-            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F005%2F007%2F569%2Foriginal%2Fcalendar-schedule-date-line-icon-illustration-logo-template-suitable-for-many-purposes-free-vector.jpg&f=1&nofb=1&ipt=43f65a943becb70b5436a00e082b8b144dedf8b20a638a81feab8b78dc70fffb&ipo=images" alt="FUTBOL">
+            <img src="https://static.vecteezy.com/system/resources/previews/005/007/569/original/calendar-schedule-date-line-icon-illustration-logo-template-suitable-for-many-purposes-free-vector.jpg" alt="CALENDARIO">
             <p>CALENDARIO</p>
         </a>
     </div>
+
+    <script>
+        document.querySelectorAll('.boton').forEach(boton => {
+            let timer;
+
+            // Al pasar el ratón sobre el botón
+            boton.addEventListener('mouseenter', () => {
+                timer = setTimeout(() => {
+                    window.location.href = boton.href; // Redirige después de 10 segundos
+                }, 10000); // 10 segundos
+            });
+
+            // Al salir el ratón del botón
+            boton.addEventListener('mouseleave', () => {
+                clearTimeout(timer); // Cancela el temporizador si el ratón sale
+            });
+        });
+    </script>
 </body>
 </html>
