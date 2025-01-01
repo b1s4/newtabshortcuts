@@ -3,8 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>new tab</title>
+    <title>New Tab</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .botones {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .boton {
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            width: 150px;
+        }
+        .boton:hover {
+            background-color: #f0f0f0;
+        }
+        .boton img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
 </head>
 <body>
     <div class="botones">
@@ -17,23 +41,39 @@
             <p>NOTICIAS</p>
         </a>
         <a href="https://remotedesktop.google.com/support/" class="boton">
-            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.idgesg.net%2Fimages%2Farticle%2F2017%2F10%2Fgoogle_chrome_remote_desktop_logo-100738981-large.jpg&f=1&nofb=1&ipt=b1b3ed4b741dfb6aa437269cf3da0c47eb0a678dd26dd12709876cfaad39e946&ipo=images" alt="AYUDA">
+            <img src="https://images.idgesg.net/images/article/2017/10/google_chrome_remote_desktop_logo-100738981-large.jpg" alt="AYUDA">
             <p>AYUDA</p>
         </a>
         <a href="https://www.google.com/" class="boton">
-            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogos-world.net%2Fwp-content%2Fuploads%2F2020%2F09%2FGoogle-Symbol.png&f=1&nofb=1&ipt=f4876909fe6bab64135f139f254b7df1a9ea73b6c429c32c8e23f95ea4f01e46&ipo=images" alt="AYUDA">
+            <img src="https://logos-world.net/wp-content/uploads/2020/09/Google-Symbol.png" alt="BUSCAR EN INTERNET">
             <p>BUSCAR EN INTERNET</p>
         </a>
-        </a>
         <a href="https://www.tiempo.com/lasarte-oria.htm" class="boton">
-            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F007%2F956%2F515%2Foriginal%2Fanimated-sun-icon-in-white-background-vector.jpg&f=1&nofb=1&ipt=72a1a31036fc05ec0c16317ad1227fecac26c7f87b81ded2e4dd5563ced2ff68&ipo=images" alt="AYUDA">
+            <img src="https://static.vecteezy.com/system/resources/previews/007/956/515/original/animated-sun-icon-in-white-background-vector.jpg" alt="TIEMPO">
             <p>TIEMPO</p>
         </a>
-         </a>
         <a href="https://www.youtube.com" class="boton">
-            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F1.bp.blogspot.com%2F-zaoiLHspoKI%2FXeI_0uFAeCI%2FAAAAAAAAF38%2FCyHgdY8bdOQ7d979yOJ0voSIA8b5bAF2wCLcBGAsYHQ%2Fs1600%2FYoutube-Icon-2000x2000.png&f=1&nofb=1&ipt=5050ed50efce1936ed0aaded409b0201c4c6603e623e22a0d34a2ff014e389c8&ipo=images" alt="AYUDA">
+            <img src="https://1.bp.blogspot.com/-zaoiLHspoKI/XeI_0uFAeCI/AAAAAAAFF38/CyHgdY8bdOQ7d979yOJ0voSIA8b5bAF2wCLcBGAsYHQ/s1600/Youtube-Icon-2000x2000.png" alt="VIDEOS">
             <p>VIDEOS</p>
         </a>
     </div>
+
+    <script>
+        document.querySelectorAll('.boton').forEach(boton => {
+            let timer;
+
+            // Al pasar el ratón sobre el botón
+            boton.addEventListener('mouseenter', () => {
+                timer = setTimeout(() => {
+                    window.location.href = boton.href; // Redirige después de 10 segundos
+                }, 10000); // 10 segundos
+            });
+
+            // Al salir el ratón del botón
+            boton.addEventListener('mouseleave', () => {
+                clearTimeout(timer); // Cancela el temporizador si el ratón sale
+            });
+        });
+    </script>
 </body>
 </html>
