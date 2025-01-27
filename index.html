@@ -1,74 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Botones con Enlaces</title>
-    <style>
-        body {
-            margin: 0;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            height: 100vh;
-        }
-
-        .button {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            cursor: pointer;
-        }
-
-        .button img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .button:hover img {
-            transform: scale(1.1);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Botones</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <div class="button" href="futbol.html">
-        <img src="https://cdn-icons-png.flaticon.com/512/8065/8065713.png" alt="Botón 1">
-    </div>
-    <div class="button" data-url="https://enlace2.com">
-        <img src="https://via.placeholder.com/500" alt="Botón 2">
-    </div>
-    <div class="button" data-url="https://remotedesktop.google.com/support/">
-        <img src="https://images.idgesg.net/images/article/2017/10/google_chrome_remote_desktop_logo-100738981-large.jpg" alt="Botón 3">
-    </div>
-    <div class="button" data-url="https://www.google.com/">
-        <img src="https://logos-world.net/wp-content/uploads/2020/09/Google-Symbol.png" alt="Botón 4">
-    </div>
-    <div class="button" data-url="https://www.tiempo.com/lasarte-oria.htm">
-        <img src="https://static.vecteezy.com/system/resources/previews/007/956/515/original/animated-sun-icon-in-white-background-vector.jpg" alt="Botón 5">
-    </div>
-    <div class="button" data-url="https://www.youtube.com">
-        <img src="https://1.bp.blogspot.com/-zaoiLHspoKI/XeI_0uFAeCI/AAAAAAAFF38/CyHgdY8bdOQ7d979yOJ0voSIA8b5bAF2wCLcBGAsYHQ/s1600/Youtube-Icon-2000x2000.png" alt="Botón 6">
-    </div>
-
-    <script>
-        document.querySelectorAll('.button').forEach(button => {
-            let timer;
-
-            button.addEventListener('mouseenter', () => {
-                timer = setTimeout(() => {
-                    window.location.href = button.dataset.url;
-                }, 10000); // 10 segundos
-            });
-
-            button.addEventListener('mouseleave', () => {
-                clearTimeout(timer);
-            });
-        });
-    </script>
-
+  <div class="container">
+    <a href="pagina1.html" class="button">
+      <img src="https://via.placeholder.com/150" alt="Imagen 1">
+      <p>Ir a Página 1</p>
+    </a>
+    <a href="https://example.com" class="button">
+      <img src="https://via.placeholder.com/150" alt="Imagen 2">
+      <p>Enlace 2</p>
+    </a>
+    <a href="https://example.com" class="button">
+      <img src="https://via.placeholder.com/150" alt="Imagen 3">
+      <p>Enlace 3</p>
+    </a>
+    <a href="https://example.com" class="button">
+      <img src="https://via.placeholder.com/150" alt="Imagen 4">
+      <p>Enlace 4</p>
+    </a>
+    <a href="https://example.com" class="button">
+      <img src="https://via.placeholder.com/150" alt="Imagen 5">
+      <p>Enlace 5</p>
+    </a>
+    <a href="https://example.com" class="button">
+      <img src="https://via.placeholder.com/150" alt="Imagen 6">
+      <p>Enlace 6</p>
+    </a>
+  </div>
 </body>
 </html>
