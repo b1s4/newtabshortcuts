@@ -19,7 +19,7 @@ body {
   grid-template-rows: repeat(2, 1fr);
   gap: 10px;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .button {
