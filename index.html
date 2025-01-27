@@ -1,79 +1,74 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Tab</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Botones con Enlaces</title>
     <style>
-        .botones {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+        body {
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            height: 100vh;
         }
-        .boton {
-            display: inline-block;
-            text-decoration: none;
-            text-align: center;
-            border: 1px solid #ccc;
-            padding: 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            width: 150px;
+
+        .button {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            cursor: pointer;
         }
-        .boton:hover {
-            background-color: #f0f0f0;
+
+        .button img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
         }
-        .boton img {
-            width: 50px;
-            height: 50px;
+
+        .button:hover img {
+            transform: scale(1.1);
         }
     </style>
 </head>
 <body>
-    <div class="botones">
-        <a href="futbol.html" class="boton">
-            <img src="https://cdn-icons-png.flaticon.com/512/8065/8065713.png" alt="FUTBOL">
-            <p>FUTBOL</p>
-        </a>
-        <a href="noticias.html" class="boton">
-            <img src="https://static.vecteezy.com/system/resources/previews/025/926/925/non_2x/newspaper-flat-icon-news-symbol-logo-illustration-vector.jpg" alt="NOTICIAS">
-            <p>NOTICIAS</p>
-        </a>
-        <a href="https://remotedesktop.google.com/support/" class="boton">
-            <img src="https://images.idgesg.net/images/article/2017/10/google_chrome_remote_desktop_logo-100738981-large.jpg" alt="AYUDA">
-            <p>AYUDA</p>
-        </a>
-        <a href="https://www.google.com/" class="boton">
-            <img src="https://logos-world.net/wp-content/uploads/2020/09/Google-Symbol.png" alt="BUSCAR EN INTERNET">
-            <p>BUSCAR EN INTERNET</p>
-        </a>
-        <a href="https://www.tiempo.com/lasarte-oria.htm" class="boton">
-            <img src="https://static.vecteezy.com/system/resources/previews/007/956/515/original/animated-sun-icon-in-white-background-vector.jpg" alt="TIEMPO">
-            <p>TIEMPO</p>
-        </a>
-        <a href="https://www.youtube.com" class="boton">
-            <img src="https://1.bp.blogspot.com/-zaoiLHspoKI/XeI_0uFAeCI/AAAAAAAFF38/CyHgdY8bdOQ7d979yOJ0voSIA8b5bAF2wCLcBGAsYHQ/s1600/Youtube-Icon-2000x2000.png" alt="VIDEOS">
-            <p>VIDEOS</p>
-        </a>
+
+    <div class="button" href="futbol.html">
+        <img src="https://cdn-icons-png.flaticon.com/512/8065/8065713.png" alt="Botón 1">
+    </div>
+    <div class="button" data-url="https://enlace2.com">
+        <img src="https://via.placeholder.com/500" alt="Botón 2">
+    </div>
+    <div class="button" data-url="https://remotedesktop.google.com/support/">
+        <img src="https://images.idgesg.net/images/article/2017/10/google_chrome_remote_desktop_logo-100738981-large.jpg" alt="Botón 3">
+    </div>
+    <div class="button" data-url="https://www.google.com/">
+        <img src="https://logos-world.net/wp-content/uploads/2020/09/Google-Symbol.png" alt="Botón 4">
+    </div>
+    <div class="button" data-url="https://www.tiempo.com/lasarte-oria.htm">
+        <img src="https://static.vecteezy.com/system/resources/previews/007/956/515/original/animated-sun-icon-in-white-background-vector.jpg" alt="Botón 5">
+    </div>
+    <div class="button" data-url="https://www.youtube.com">
+        <img src="https://1.bp.blogspot.com/-zaoiLHspoKI/XeI_0uFAeCI/AAAAAAAFF38/CyHgdY8bdOQ7d979yOJ0voSIA8b5bAF2wCLcBGAsYHQ/s1600/Youtube-Icon-2000x2000.png" alt="Botón 6">
     </div>
 
     <script>
-        document.querySelectorAll('.boton').forEach(boton => {
+        document.querySelectorAll('.button').forEach(button => {
             let timer;
 
-            // Al pasar el ratón sobre el botón
-            boton.addEventListener('mouseenter', () => {
+            button.addEventListener('mouseenter', () => {
                 timer = setTimeout(() => {
-                    window.location.href = boton.href; // Redirige después de 10 segundos
+                    window.location.href = button.dataset.url;
                 }, 10000); // 10 segundos
             });
 
-            // Al salir el ratón del botón
-            boton.addEventListener('mouseleave', () => {
-                clearTimeout(timer); // Cancela el temporizador si el ratón sale
+            button.addEventListener('mouseleave', () => {
+                clearTimeout(timer);
             });
         });
     </script>
+
 </body>
 </html>
