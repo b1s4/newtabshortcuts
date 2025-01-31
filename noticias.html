@@ -1,79 +1,37 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noticias</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .botones {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .boton {
-            display: inline-block;
-            text-decoration: none;
-            text-align: center;
-            border: 1px solid #ccc;
-            padding: 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            width: 150px;
-        }
-        .boton:hover {
-            background-color: #f0f0f0;
-        }
-        .boton img {
-            width: 50px;
-            height: 50px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noticias</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="botones">
-        <a href="https://news.google.es/" class="boton">
-            <img src="https://static.vecteezy.com/system/resources/previews/022/613/029/non_2x/google-news-icon-logo-symbol-free-png.png" alt="NOTICIAS GENERALES">
-            <p>NOTICIAS GENERALES</p>
-        </a>
-        <a href="https://news.google.com/foryou" class="boton">
-            <img src="https://static.vecteezy.com/system/resources/previews/022/613/029/non_2x/google-news-icon-logo-symbol-free-png.png" alt="NOTICIAS ILIMITADAS">
-            <p>NOTICIAS ILIMITADAS</p>
-        </a>
-        <a href="http://www.diariovasco.com" class="boton">
-            <img src="https://yt3.ggpht.com/a/ATXAJxrqvR4TDiqmFjd9AFdAniTIAqJghLn4h57gQ=s900-c-k-c0xffffffff-no-rj-mo" alt="DIARIO VASCO">
-            <p>DIARIO VASCO</p>
-        </a>
-        <a href="https://www.elmundo.es/" class="boton">
-            <img src="https://logowik.com/content/uploads/images/el-mundo6102.logowik.com.webp" alt="EL MUNDO">
-            <p>EL MUNDO</p>
-        </a>
-        <a href="https://elpais.com/" class="boton">
-            <img src="https://logodownload.org/wp-content/uploads/2019/05/el-pais-logo-0.png" alt="EL PAÍS">
-            <p>EL PAÍS</p>
-        </a>
-        <a href="https://www.marca.com/" class="boton">
-            <img src="https://www.logotypes101.com/logos/292/E10C3118FC99B2AE2DA7987F3D1693FD/tn_Marca_com158.png" alt="MARCA">
-            <p>MARCA</p>
-        </a>
-    </div>
-
-    <script>
-        document.querySelectorAll('.boton').forEach(boton => {
-            let timer;
-
-            // Al pasar el ratón sobre el botón
-            boton.addEventListener('mouseenter', () => {
-                timer = setTimeout(() => {
-                    window.location.href = boton.href; // Redirige después de 10 segundos
-                }, 10000); // 10 segundos
-            });
-
-            // Al salir el ratón del botón
-            boton.addEventListener('mouseleave', () => {
-                clearTimeout(timer); // Cancela el temporizador si el ratón sale
-            });
-        });
-    </script>
+  <div class="container">
+    <a href="https://news.google.es/" class="button">
+      <img src="news/googlenews.png" alt="Noticias">
+      <p>NOTICIAS GENERALES</p>
+    </a>
+    <a href="https://news.google.com/foryou" class="button">
+      <img src="news/googlenews.png" alt="Calendario Partidos">
+      <p>NOTICIAS ILIMITADAS</p>
+    </a>
+    <a href="http://www.diariovasco.com" class="button">
+      <img src="news/dv.png" alt="Ayuda">
+      <p>DIARIO VASCO</p>
+    </a>
+    <a href="https://www.elmundo.es/" class="button">
+      <img src="news/elmundo.png" alt="Buscar">
+      <p>EL MUNDO</p>
+    </a>
+    <a href="https://elpais.com/" class="button">
+      <img src="news/elpais.png" alt="Imagen 5">
+      <p>EL PAÍS</p>
+    </a>
+    <a href="https://www.marca.com/" class="button">
+      <img src="news/marca.png" alt="Imagen 6">
+      <p>MARCA</p>
+    </a>
+  </div>
 </body>
 </html>
